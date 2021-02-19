@@ -1,0 +1,196 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	width: 450px;
+	height: 500px;
+}
+
+.logo {
+	float: left;
+	padding-top: 14px;
+	width: 45px
+}
+
+.header {
+	height: 70px;
+	color: #000;
+	background-color: #f6f7f8;
+	border-bottom: 2px solid #d9d9d9;
+	font-size: 16px;
+	line-height: 45px;
+	padding: 20px 20px 20px 12px;
+	top: 0;
+	width: 100%
+}
+
+.banner {
+	float: left;
+	line-height: normal;
+	margin-left: 10px;
+	padding-top: 16px
+}
+
+.title {
+	font-size: 14px;
+	font-weight: 700
+}
+
+.version {
+	font-size: 12px;
+	font-weight: 400
+}
+
+.summary {
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 0 14px 14px
+}
+
+.linebreak {
+	border-top: 1px solid #d9d9d9;
+	content: "";
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+
+.body {
+	font-size: 12px;
+	position: relative
+}
+
+
+/* Стили раскрывающегося списка */
+/* Цвет выделения */
+*::selection {
+	background: rgb(186, 221, 251);
+}
+
+.wrapp {
+	max-height: 380px;
+	overflow: auto;
+	padding: 12px;
+}
+
+.container {
+	position: relative;
+	padding-left: .415em;
+	overflow: hidden;
+}
+
+/* Стиль текста */
+.font {
+	font: 9pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	word-spacing: 0.3em;
+}
+
+/* Горизонтальная линия после каждого блока */
+.container > .block::after {
+	content: "";
+	display: block;
+	width: 200%;
+	height: 1px;
+	background-color: rgb(231, 231, 231);
+	position: relative;
+	left: -50%;
+}
+
+/* Смещение каждого вложенного блока */
+.block, .block span {
+	margin-left: .913em;
+	position: relative;
+	display: block;
+}
+
+/* Скрываем чекбоксы и блоки с содержанием */
+.hide {
+	display: none; 
+}
+.hide + label ~ div{
+	display: none;
+}
+
+/* Оформление каждого текста label */
+.hide + label {
+	padding: 0;
+	cursor: pointer;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* Оформление верхнего текста label */
+.container > .block > .hide + label {
+	margin: .415em 0em;
+}
+
+/* Когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+	display: block;
+	padding: .498em 0em;
+}
+
+/* Оформление верхнего блока с содержанием  */
+.container > .block > .hide:checked + label + div {
+	margin-bottom: .747em;
+}
+
+.hide + label:before {
+	content: url("images/arrow.svg");
+	display: inline-block;
+	width: .913em;
+	height: .913em;
+	position: absolute;
+	left: -1.162em;
+	transform: scale(.5);
+}
+
+.hide:checked + label:before {
+	transform: scale(.5) rotate(90deg) translate(.249em, -.166em);
+}
+
+span.key {
+	display: inline;
+	margin: initial;
+	color: rgb(168, 168, 168);
+}
+
+/* Исчезающий текст при раскрытии блока */
+span.autohide {
+	display: inline;
+	margin: initial;
+}
+
+.hide:checked + label > span.autohide {
+	display: none;
+}
+
+/* Стили строки фильтрации */
+#filter {
+	margin-top: 5px;
+	height: 20px;
+    padding-left: 2px;
+	padding-right: 22px;
+}
+
+#clearFilter {
+	display: none;
+	background-color: #f6f7f8;
+	background-image: url("images/clear.svg");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	position: relative;
+	left: -24px;
+    top: 3px;
+}
+
+#clearFilter:hover {
+	background-color: #d9d9d9;
+}

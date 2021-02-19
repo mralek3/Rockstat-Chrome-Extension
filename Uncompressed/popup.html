@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rockstat</title>
+	<link rel="stylesheet" href="popup.css">
+	<script type="module" src="popup.js"></script>
+</head>
+<body>
+	<noscript>Вам необходимо включить JavaScript для запуска этого приложения.</noscript>
+	<header class="header">
+		<div><img class="logo" src="/images/logo.svg"></div>
+		<div class="banner"><span class="title">Rockstat</span>
+			<br><span class="version"></span></div>
+	</header>
+	<div class="summary">
+		<span>
+			<span id="requestCount"></span>
+			<span id="textReqCount"></span>
+			<span id="domain"></span>
+		</span>
+		<div>
+			<input id="filter" placeholder="фильтр">
+			<div id="clearFilter"></div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="linebreak"></div>
+		<div class="wrapp">
+			<div class="container font"></div>
+		</div>
+	</div>
+</body>
+</html>
